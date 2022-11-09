@@ -5,7 +5,14 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraProcessing", "OpenCV\CameraProcessing.csproj", "{15214DB3-A48B-4FC7-BBF2-6B26DF2503BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing", "ImageProcessing\ImageProcessing.csproj", "{5B0360D2-9971-4DBF-9F0B-3DF3EDE8491F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageProcessing", "ImageProcessing\ImageProcessing.csproj", "{5B0360D2-9971-4DBF-9F0B-3DF3EDE8491F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppCore", "AppCore\AppCore.csproj", "{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CEE8A88E-D81D-4606-B715-2A9406F7B19C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +48,18 @@ Global
 		{5B0360D2-9971-4DBF-9F0B-3DF3EDE8491F}.Release|x64.Build.0 = Release|Any CPU
 		{5B0360D2-9971-4DBF-9F0B-3DF3EDE8491F}.Release|x86.ActiveCfg = Release|Any CPU
 		{5B0360D2-9971-4DBF-9F0B-3DF3EDE8491F}.Release|x86.Build.0 = Release|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Debug|x64.Build.0 = Debug|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Debug|x86.Build.0 = Debug|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Release|x64.ActiveCfg = Release|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Release|x64.Build.0 = Release|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Release|x86.ActiveCfg = Release|Any CPU
+		{609190F7-384E-4A3C-A7EC-8E1BA90A1DEC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

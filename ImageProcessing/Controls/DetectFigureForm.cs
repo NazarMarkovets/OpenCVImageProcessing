@@ -1,15 +1,21 @@
 ﻿using OpenCvSharp;
 using OpenCvSharp.Extensions;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DetectFigure
+namespace ImageProcessing
 {
-    public partial class MainForm : Form
+    public partial class DetectFigureForm : UserControl
     {
         Mat srcImage;
-        private readonly Scalar[] colors = 
+        private readonly Scalar[] colors =
             new Scalar[] {  new Scalar(255,0,0),
                             new Scalar(0,255,0),
                             new Scalar(0,0,255),
@@ -22,7 +28,7 @@ namespace DetectFigure
                             new Scalar(60,180,20),
                             new Scalar(180,120,5),
                             new Scalar(25,180,255)};
-        public MainForm()
+        public DetectFigureForm()
         {
             InitializeComponent();
         }
@@ -31,7 +37,7 @@ namespace DetectFigure
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
-            if(DialogResult.OK == fileDialog.ShowDialog())
+            if (DialogResult.OK == fileDialog.ShowDialog())
             {
                 picBox_original.Image = Image.FromFile(fileDialog.FileName);
                 srcImage = Cv2.ImRead(fileDialog.FileName, ImreadModes.Grayscale);
@@ -51,8 +57,8 @@ namespace DetectFigure
             for (int i = 0; i < figures.Length; i++)
             {
                 // Draw rectangle border
-                Cv2.DrawContours(result, figures, i, colors[i<colors.Length? i: 10], 1, LineTypes.AntiAlias);
-                if(figures.Length != 32)
+                Cv2.DrawContours(result, figures, i, colors[i < colors.Length ? i : 10], 1, LineTypes.AntiAlias);
+                if (figures.Length != 32)
                 {
                     Rect border = Cv2.BoundingRect(figures[i]);
                     border.Width += 30;
@@ -100,7 +106,7 @@ namespace DetectFigure
                     var keypoints = detector.Detect(srcImage);
                     Cv2.DrawKeypoints(result, keypoints, result, new Scalar(0, 0, 255), DrawMatchesFlags.DrawRichKeypoints);
                     Cv2.PutText(result, $"Number of Circles: {keypoints.Length}", new OpenCvSharp.Point(20, 550), HersheyFonts.HersheySimplex, 1, colors[new Random().Next(0, colors.Length)], 2);
-                    
+
                 }
             }
             lbl_FiguresCount.Text = $"Figures count: {figures.Length}";
